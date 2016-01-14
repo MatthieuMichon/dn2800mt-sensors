@@ -18,7 +18,7 @@ chip "w83627dhg-*"
 
 # Voltages
 
-    # Processor Vcc
+    # Processor Vcore
     label   in0            "Vcore"
     set     in0_min        0.75
     set     in0_max        1.21
@@ -28,6 +28,11 @@ chip "w83627dhg-*"
     compute in1            12*@, @/12
     set     in1_min        12 * 0.95
     set     in1_max        12 * 1.05
+
+    # AVcc
+    label   in2            "Avcc"
+    set     in2_min        3.3 * 0.95
+    set     in2_max        3.3 * 1.05
 
     # +3.3V
     label   in3            "+3.3V"
@@ -54,6 +59,11 @@ chip "w83627dhg-*"
     label   in7            "3VSB"
     set     in7_min        3.3 * 0.95
     set     in7_max        3.3 * 1.05
+
+    # Battery Voltage
+    label   in8            "Vbat"
+    set     in8_min        3.3 * 0.95
+    set     in8_max        3.3 * 1.05
 
 # Temperatures
 
